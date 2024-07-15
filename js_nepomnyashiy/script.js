@@ -1,22 +1,22 @@
-// const queryValue = `
-// query getTodos {
-//   todos{
-//     data{
-//       id
-//       title
-//     }
-//   }
-// }
-// `
-//
-// fetch("https://graphqlzero.almansi.me/api",
-//     {
-//         method: "POST",
-//         headers: {'Content-Type': 'application/json'},
-//         body: JSON.stringify({query: queryValue}),
-//     })
-//     .then(response => response.json())
-//     .then(data => console.log(data.data.todos.data))
+const queryValue = `
+query getTodos {
+  todos {
+    data{
+      id
+      title
+    }
+  }
+}
+`
+
+fetch("https://graphqlzero.almansi.me/api",
+    {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({query: queryValue}),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data.data.todos.data))
 
 // const queryValue = `
 // mutation changeStatus ($id:ID!, $input: UpdateTodoInput!) {

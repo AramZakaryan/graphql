@@ -16,13 +16,13 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "startAll": "concurrently \"npm run startReact\" \"npm run startJGQL\"",
     "startReact": "react-scripts start",
-    "startJGQL": "json-graphql-server db.ts --p 4000"
+    "startJGQL": "json-graphql-server db.ts --p 4000",
+    "startCodeGen": "graphql-codegen --watch"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +43,11 @@
     ]
   },
   "devDependencies": {
-    "prettier": "3.3.3"
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/client-preset": "^4.3.2",
+    "@parcel/watcher": "^2.4.1",
+    "prettier": "3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
   }
 }
